@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {    
+    font-family: Montserrat;
+    --bg-color: #FFB18C;
+    --text-color: #333;
+    --faq-color: #FFF;
+    --dark-color: rgb(255, 130, 77);
+}
+
+body, div, ul, li, a, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+.faq {
+    max-width: clamp(300px, 70%, 700px);
+    margin: auto;
+}
+
+.faq details {
+    background: var(--faq-color);
+    margin: 7px;
+    padding: 7px;
+}
+
+.content {
+    padding: 5px 10px;
+    margin: 10px;
+    margin-bottom: 0;
+    border-top: 1px solid var(--bg-color);
+    font-size: .8rem;
+    color: var(--text-color);
+}
+
+summary {
+    user-select: none;
+    position: relative;
+}
+
+summary::marker {
+    content: '';
+}
+
+summary::before {
+    content: '+';
+    color: #FFB18C;
+    position: absolute;
+    right: 0;
+    font-weight: 900;
+}
+
+details[open] summary::before {
+    content: '-';
+}
+
+details b {
+    background: var(--dark-color);
+    padding: 2px 4px;
+    color: var(--faq-color);
+}
+
+details:nth-child(2) b {
+    background: #48E;
+}
+
+details:nth-child(3) b {
+    background: #4B6;
+}
